@@ -1,11 +1,13 @@
 # Vyrtual Documentation
 
 ## Api
+
 [Models](https://github.com/VyrtualAI/Vyrtual-Documentaiton/blob/development/Vyrtual-Api/models.md)
 
 [App Entry](https://github.com/VyrtualAI/Vyrtual-Documentaiton/blob/development/Vyrtual-Api/main.md)
 
 #### Routes
+
 [Agora](https://github.com/VyrtualAI/Vyrtual-Documentaiton/blob/development/Vyrtual-Api/routes/agora.md)
 
 [Attendee](https://github.com/VyrtualAI/Vyrtual-Documentaiton/blob/development/Vyrtual-Api/routes/attendee.md)
@@ -22,12 +24,21 @@
 
 [Seed](https://github.com/VyrtualAI/Vyrtual-Documentaiton/blob/development/Vyrtual-Api/routes/seed.md)
 
+[Tag](https://github.com/VyrtualAI/Vyrtual-Documentaiton/blob/development/Vyrtual-Api/routes/tag.md)
+
+[Task](https://github.com/VyrtualAI/Vyrtual-Documentaiton/blob/development/Vyrtual-Api/routes/task.md)
+
+[TaskBoard](https://github.com/VyrtualAI/Vyrtual-Documentaiton/blob/development/Vyrtual-Api/routes/taskboard.md)
+
 [User](https://github.com/VyrtualAI/Vyrtual-Documentaiton/blob/development/Vyrtual-Api/routes/user.md)
 
 #### Types
+
 [AccessGroup](https://github.com/VyrtualAI/Vyrtual-Documentaiton/blob/development/Vyrtual-Api/types/AccessGroup.md)
 
 [Attendee](https://github.com/VyrtualAI/Vyrtual-Documentaiton/blob/development/Vyrtual-Api/types/Attendee.md)
+
+[BoardColumn](https://github.com/VyrtualAI/Vyrtual-Documentaiton/blob/development/Vyrtual-Api/types/BoardColumn.md)
 
 [Event](https://github.com/VyrtualAI/Vyrtual-Documentaiton/blob/development/Vyrtual-Api/types/Event.md)
 
@@ -46,5 +57,11 @@
 [Position](https://github.com/VyrtualAI/Vyrtual-Documentaiton/blob/development/Vyrtual-Api/types/Position.md)
 
 [Role](https://github.com/VyrtualAI/Vyrtual-Documentaiton/blob/development/Vyrtual-Api/types/Role.md)
+
+[Tag](https://github.com/VyrtualAI/Vyrtual-Documentaiton/blob/development/Vyrtual-Api/types/Tag.md)
+
+[Task](https://github.com/VyrtualAI/Vyrtual-Documentaiton/blob/development/Vyrtual-Api/types/Task.md)
+
+[TaskBoard](https://github.com/VyrtualAI/Vyrtual-Documentaiton/blob/development/Vyrtual-Api/types/TaskBoard.md)
 
 [User](https://github.com/VyrtualAI/Vyrtual-Documentaiton/blob/development/Vyrtual-Api/types/User.md)

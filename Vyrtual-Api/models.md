@@ -1,5 +1,7 @@
 # /models/models.go
 
+## Models
+
 This file contains the model definitions for various entities in the application. Here is a summary of the models defined in this file:
 
 ### User
@@ -51,3 +53,11 @@ The `OrganizationInvitation` model represents an organization invitation in the 
 The `Attendee` model represents an attendee of an event in the system. It contains information about the user and the event they are attending.
 
 These models are used to define the data structure and relationships between different entities in the application.
+
+### Department
+
+The `Department` model represents a department within an orgnization. It is simply a list of department names recognized by the Vyrtual App.
+
+### Category
+
+The `Category` model represents a user generated category. Users can use this to define and then filter things like a `Task` based on custom definitions.

@@ -123,7 +123,9 @@ Body (JSON, required): Contains the task data, including title, description, due
     "assignee": number[], // array of User IDs
     "tags": number[], // array of Tag IDs
     "board_column": number,
-    "task_board_id": number
+    "task_board_id": number,
+    "category_id": number,
+    "prioritized"?: boolean
 }
 ```
 
@@ -175,6 +177,8 @@ Body (JSON, required): Contains the task update data.
   "assignee"?: number | number[], // User ID or array of User IDs
   "tags"?: number | number[], // Tag ID or array of Tag IDs
   "board_column"?: number
+  "category"?: number,
+  "prioritized"?: boolean
 }
 ```
 

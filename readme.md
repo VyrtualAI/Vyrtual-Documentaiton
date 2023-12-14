@@ -12,6 +12,10 @@
 
 [Attendee](https://github.com/VyrtualAI/Vyrtual-Documentaiton/blob/development/Vyrtual-Api/routes/attendee.md)
 
+[Category](https://github.com/VyrtualAI/Vyrtual-Documentaiton/blob/development/Vyrtual-Api/routes/category.md)
+
+[Department](https://github.com/VyrtualAI/Vyrtual-Documentaiton/blob/development/Vyrtual-Api/routes/department.md)
+
 [Event](https://github.com/VyrtualAI/Vyrtual-Documentaiton/blob/development/Vyrtual-Api/routes/event.md)
 
 [File](https://github.com/VyrtualAI/Vyrtual-Documentaiton/blob/development/Vyrtual-Api/routes/file.md)
@@ -39,6 +43,10 @@
 [Attendee](https://github.com/VyrtualAI/Vyrtual-Documentaiton/blob/development/Vyrtual-Api/types/Attendee.md)
 
 [BoardColumn](https://github.com/VyrtualAI/Vyrtual-Documentaiton/blob/development/Vyrtual-Api/types/BoardColumn.md)
+
+[Category](https://github.com/VyrtualAI/Vyrtual-Documentaiton/blob/development/Vyrtual-Api/types/Category.md)
+
+[Department](https://github.com/VyrtualAI/Vyrtual-Documentaiton/blob/development/Vyrtual-Api/types/Department.md)
 
 [Event](https://github.com/VyrtualAI/Vyrtual-Documentaiton/blob/development/Vyrtual-Api/types/Event.md)
 

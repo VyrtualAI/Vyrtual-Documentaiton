@@ -114,14 +114,14 @@ Request:
 
 ```typescript
 {
-  "id"?: number,
-  "organization"?: number
+  "file_id"?: number,
+  "organization_id": number
 }
 ```
 
 | Route        | Method |
 | ------------ | ------ |
-| `/fire/{id}` | GET    |
+| `/file/{id}` | GET    |
 
 Response:
 
@@ -154,7 +154,7 @@ Request:
 {
   "name": string,
   "thumbnail": string,
-  "organizationID": number,
+  "organization_id": number,
   "viewableBy": [number],
   "editableBy": [number],
   "accessibleBy": [string],
@@ -197,7 +197,8 @@ Request:
 
 ```typescript
 {
-  "id": number,
+  "file_id": number,
+  "organization_id": number
 }
 ```
 

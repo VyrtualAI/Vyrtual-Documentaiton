@@ -2,7 +2,7 @@
 
 The `file.go` package within the file folder contains API endpoints for managing `File` entities.
 
-📝 **Note:** This package is a part of the `api.vyrtual.ai` project and is focused on operations related to files, such as listing, retrieving, creating, updating, and deleting files. 
+📝 **Note:** This package is a part of the `api.vyrtual.ai` project and is focused on operations related to files, such as listing, retrieving, creating, updating, and deleting files.
 
 The file offers the following functionalities:
 
@@ -22,6 +22,7 @@ This endpoint lists files, supporting pagination and user-based access control.
 ```go
 func ListFiles(w http.ResponseWriter, r *http.Request, ctx *service.Service) error { ... }
 ```
+
 Process:
 
 Parses pagination parameters (page, per_page) from the request.
@@ -31,17 +32,20 @@ Returns the list of files along with total records, page number, and items per p
 
 Request:
 
-* Params (QueryString, required):
+- Params (QueryString, required):
+
 ```typescript
 {
   "page"?: number,
   "per_page"?: number
+  "organization_id": number
+  "file_ids"?: [number]
 }
 ```
 
-| Route                     | Method |
-| ------------------------- | ------ |
-| `/file/list`              | GET    |
+| Route        | Method |
+| ------------ | ------ |
+| `/file/list` | GET    |
 
 Response:
 
@@ -55,6 +59,7 @@ Response:
 ```
 
 ## QueryFile( ) 📚
+
 This function retrieves details of a specific file based on path and organization.
 
 ```go
@@ -68,17 +73,18 @@ Retrieves the file data based on the path, organization, and user access.
 Returns the file data.
 Request:
 
-* Params (QueryString, required):
+- Params (QueryString, required):
+
 ```typescript
 {
-  "path"?: string,
-  "organization"?: number
+  "path": string,
+  "organization_id": number
 }
 ```
 
-| Route  | Method |
-| -------| ------ |
-| `/file`| GET    |
+| Route   | Method |
+| ------- | ------ |
+| `/file` | GET    |
 
 Response:
 
@@ -89,6 +95,7 @@ Response:
 ```
 
 ## GetFile( ) 📘
+
 This endpoint retrieves a specific file by its ID and organization.
 
 ```go
@@ -103,7 +110,8 @@ Returns the file data.
 
 Request:
 
-* Params (QueryString, required):
+- Params (QueryString, required):
+
 ```typescript
 {
   "id"?: number,
@@ -111,9 +119,9 @@ Request:
 }
 ```
 
-| Route       | Method |
-| ------------| ------ |
-| `/fire/{id}`| GET    |
+| Route        | Method |
+| ------------ | ------ |
+| `/fire/{id}` | GET    |
 
 Response:
 
@@ -123,7 +131,8 @@ Response:
 }
 ```
 
-PostFile( ) 🛠️
+## PostFile( ) 🛠️
+
 This endpoint is used to create a new file record.
 
 ```go
@@ -138,7 +147,9 @@ Creates a new file record with specified permissions and associations.
 Returns the created file data.
 
 Request:
-* Body (JSON, required): Contains the file data including permissions and associations.
+
+- Body (JSON, required): Contains the file data including permissions and associations.
+
 ```typescript
 {
   "name": string,
@@ -153,9 +164,9 @@ Request:
 }
 ```
 
-| Route         | Method |
-| ------------- | ------ |
-| `/file/create`| POST   |
+| Route          | Method |
+| -------------- | ------ |
+| `/file/create` | POST   |
 
 Response:
 
@@ -166,6 +177,7 @@ Response:
 ```
 
 ## UpdateFile( ) 🔄
+
 This function updates details of an existing file.
 
 ```go
@@ -181,27 +193,33 @@ Returns the updated file data.
 
 Request:
 
-* Params (QueryString, required):
+- Params (QueryString, required):
+
 ```typescript
 {
   "id": number,
 }
 ```
 
-* Body (JSON, required): Contains the file update data
+- Body (JSON, required): Contains the file update data
+
 ```typescript
 {
+  "name": string,
+  "path": string,
+  "thumbnail"?: string,
+  "parent_folder_id"?: number,
+  "size"?: number,
   "viewableBy"?: [number],
   "editableBy"?: [number],
   "accessibleBy"?: [string],
   "modifiableBy"?: [string],
-  // other fields as required
 }
 ```
 
-| Route         | Method |
-| ------------- | ------ |
-| `/file/update`| PUT    |
+| Route          | Method |
+| -------------- | ------ |
+| `/file/update` | PUT    |
 
 Response:
 
@@ -212,6 +230,7 @@ Response:
 ```
 
 ## DeleteFile( ) ❌
+
 This endpoint is used to delete a file record.
 
 ```go
@@ -227,19 +246,21 @@ Returns a confirmation message.
 
 Request:
 
-* Params (QueryString, required):
+- Params (QueryString, required):
+
 ```typescript
 {
   "id"?: number,
 }
 ```
 
-| Route         | Method |
-| --------------| ------ |
-| `/file/delete`| DELETE |
+| Route          | Method |
+| -------------- | ------ |
+| `/file/delete` | DELETE |
 
 Response:
 
 ```typescript
-{}
+{
+}
 ```

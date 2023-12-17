@@ -12,7 +12,7 @@ type User = {
   primary_organization: number;
   phone_number: string;
   organizations: number[];
-  language: string[];
+  languages: string[];
   organization_profiles: OrganizationProfile[];
   positions: number[];
 };

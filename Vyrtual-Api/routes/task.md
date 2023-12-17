@@ -174,10 +174,12 @@ Body (JSON, required): Contains the task update data.
   "title"?: string,
   "description"?: string,
   "due_date"?: string,
-  "assignee"?: number | number[], // User ID or array of User IDs
-  "tags"?: number | number[], // Tag ID or array of Tag IDs
-  "board_column"?: number
-  "category"?: number,
+  "assignee_ids"?:[number],
+  "tag_ids"?: [number],
+  "media_ids"?: [number],
+  "task_board_id": number,
+  "board_column_id"?: number,
+  "category_id"?: number,
   "prioritized"?: boolean
 }
 ```

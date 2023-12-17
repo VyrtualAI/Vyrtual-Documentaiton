@@ -165,7 +165,7 @@ Body (JSON, required): Contains the task board update data
 {
 "name"?: string,
 "columns"?: [Column],
-"tasks"?: [Task]
+"task_ids"?: [number]
 }
 ```
 

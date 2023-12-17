@@ -151,7 +151,8 @@ Body (JSON, required): Contains the category update data
 ```typescript
 {
 "name"?: string,
-"watchers"?: [User]
+"watcher_ids"?: [number],
+"department_id": number
 }
 ```
 

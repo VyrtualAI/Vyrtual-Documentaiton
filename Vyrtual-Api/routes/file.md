@@ -211,10 +211,10 @@ Request:
   "thumbnail"?: string,
   "parent_folder_id"?: number,
   "size"?: number,
-  "viewableBy"?: [number],
-  "editableBy"?: [number],
-  "accessibleBy"?: [string],
-  "modifiableBy"?: [string],
+  "viewable_by_ids"?: [number],
+  "editable_by_ids"?: [number],
+  "accessible_by_groups"?: [string],
+  "modifiable_by_groups"?: [string],
 }
 ```
 

@@ -152,7 +152,7 @@ Body (JSON, required): Contains the category update data
 {
 "name"?: string,
 "watcher_ids"?: [number],
-"department_id": number
+"department_id"?: number
 }
 ```
 
@@ -160,10 +160,12 @@ Body (JSON, required): Contains the category update data
 | ---------------- | ------ |
 | /category/update | PUT    |
 
+```typescript
 Response:
 {
 "category": Category
 }
+```
 
 ## DeleteCategories( )
 

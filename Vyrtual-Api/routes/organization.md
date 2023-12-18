@@ -152,7 +152,7 @@ Request:
     "position": string,
     "role": string,
     "department" string
-  },
+  }[],
   "logo"?: string,
   "owner_ids"?: [number],
   "registered"?: boolean

@@ -168,8 +168,8 @@ Body (JSON, required): Contains the event update data
 ```typescript
 {
   "title"?: string,
-  "startTime"?: Date,
-  "endTime"?: Date,
+  "start_time"?: Date,
+  "end_time"?: Date,
   "description"?: string,
   "meeting_link"?: string,
   "organizer_ids"?: [number],

@@ -164,7 +164,7 @@ Body (JSON, required): Contains the task board update data
 ```typescript
 {
 "name"?: string,
-"columns"?: [Column],
+"columns"?: [BoardColumn],
 "task_ids"?: [number]
 }
 ```

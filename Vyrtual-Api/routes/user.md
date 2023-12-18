@@ -89,7 +89,7 @@ Body (JSON, required): Contains the task board update data
 "language_codes"?: [string],
 "first_name"?: string,
 "last_name"?: string,
-"primary_organization_id":?: number,
+"primary_organization_id"?: number,
 "email"?: string,
 "phone_number"?: string,
 "image"?: string

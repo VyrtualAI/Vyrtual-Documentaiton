@@ -149,9 +149,10 @@ Request:
 {
   "members"?: {
     "user_id": number,
-    "position": string,
-    "role": string,
-    "department" string
+    "position"?: string,
+    "role"?: string,
+    "department"?: string,
+    "delete"?: boolean
   }[],
   "logo"?: string,
   "owner_ids"?: [number],

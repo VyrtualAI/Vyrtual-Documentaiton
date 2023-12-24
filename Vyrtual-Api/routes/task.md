@@ -117,14 +117,14 @@ Body (JSON, required): Contains the task data, including title, description, due
 
 ```typescript
 {
-    "title": string,
-    "description": string,
-    "due_date": string,
-    "assignee": number[], // array of User IDs
-    "tags": number[], // array of Tag IDs
-    "board_column": number,
-    "task_board_id": number,
-    "category_id": number,
+    "title"?: string,
+    "description"?: string,
+    "due_date"?: string,
+    "assignee"?: number[],
+    "tags"?: number[],
+    "board_column"?: number,
+    "task_board_id"?: number,
+    "category_id"?: number,
     "prioritized"?: boolean
 }
 ```

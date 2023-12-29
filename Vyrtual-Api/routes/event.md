@@ -29,10 +29,10 @@ Determines the offset and limit based on pagination.
 Retrieves events within a specified time range and based on other identifiers.
 Returns the list of events along with total records, page number, and items per page.
 
-
 Request:
 
 Params (QueryString, required):
+
 ```typescript
 {
   "page"?: number,
@@ -44,9 +44,9 @@ Params (QueryString, required):
 }
 ```
 
-| Route           | Method |
-| --------------- | ------ |
-| `/event/list`   | GET    |
+| Route         | Method |
+| ------------- | ------ |
+| `/event/list` | GET    |
 
 Response:
 
@@ -60,6 +60,7 @@ Response:
 ```
 
 ## GetEvent( ) 📚
+
 This function retrieves details of a specific event.
 
 ```go
@@ -75,16 +76,17 @@ Returns the event data.
 Request:
 
 Params (QueryString, required):
+
 ```typescript
 {
   "id"?: number
 }
 ```
 
-| Route           | Method |
-| --------------- | ------ |
-| `/event/{id}`   | GET    |
-| `/event/`       | GET    |
+| Route         | Method |
+| ------------- | ------ |
+| `/event/{id}` | GET    |
+| `/event/`     | GET    |
 
 Response:
 
@@ -95,6 +97,7 @@ Response:
 ```
 
 ## PostEvent( ) 🛠️
+
 This endpoint is used to create a new event record.
 
 ```go
@@ -110,6 +113,7 @@ Returns the created event data.
 Request:
 
 Body (JSON, required): Contains the event data including organizers and attendees.
+
 ```typescript
 {
   "title": string,
@@ -136,6 +140,7 @@ Response:
 ```
 
 ## UpdateEvent( ) 🔄
+
 This function updates details of an existing event.
 
 ```go
@@ -151,23 +156,24 @@ Returns the updated event data.
 Request:
 
 Params (QueryString, required):
+
 ```typescript
 {
-  "id": number,
+  "event_id": number,
 }
 ```
 
 Body (JSON, required): Contains the event update data
+
 ```typescript
 {
   "title"?: string,
-  "startTime"?: Date,
-  "endTime"?: Date,
+  "start_time"?: Date,
+  "end_time"?: Date,
   "description"?: string,
-  "meetingLink"?: string,
-  "organizers"?: [number],
-  "organization"?: number,
-  "attendees"?: [number]
+  "meeting_link"?: string,
+  "organizer_ids"?: [number],
+  "attendee_ids"?: [number]
 }
 ```
 
@@ -184,6 +190,7 @@ Response:
 ```
 
 ## DeleteEvent( ) ❌
+
 This endpoint is used to delete an event record.
 
 ```go
@@ -199,6 +206,7 @@ Returns a confirmation message.
 Request:
 
 Params (QueryString, required):
+
 ```typescript
 {
   "id"?: number,
@@ -210,6 +218,8 @@ Params (QueryString, required):
 | `/event/delete` | DELETE |
 
 Response:
+
 ```typescript
-{}
+{
+}
 ```

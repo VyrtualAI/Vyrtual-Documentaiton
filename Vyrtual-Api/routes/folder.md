@@ -31,7 +31,9 @@ Retrieves folders based on the user's access rights within the organization.
 Returns the list of folders along with total records, page number, and items per page.
 
 Request:
-* Params (QueryString, required):
+
+- Params (QueryString, required):
+
 ```typescript
 {
   "page"?: number,
@@ -40,9 +42,9 @@ Request:
 }
 ```
 
-| Route         | Method |
-| ------------- | ------ |
-| `/folder/list`| GET    |
+| Route          | Method |
+| -------------- | ------ |
+| `/folder/list` | GET    |
 
 Response:
 
@@ -56,6 +58,7 @@ Response:
 ```
 
 ## QueryFolder( ) 📚
+
 This function retrieves details of a specific folder based on path and organization.
 
 ```go
@@ -71,6 +74,7 @@ Returns the folder data.
 Request:
 
 Params (QueryString, required):
+
 ```typescript
 {
   "path"?: string,
@@ -90,8 +94,8 @@ Response:
 }
 ```
 
-
 ## GetFolder( ) 📘
+
 This endpoint retrieves a specific folder by its path and organization.
 
 ```go
@@ -105,17 +109,19 @@ Retrieves the folder data based on path and user access.
 Returns the folder data.
 
 Request:
-* Params (QueryString, required):
+
+- Params (QueryString, required):
+
 ```typescript
 {
   "organization_id"?: number,
   "path"?: string
 }
-``` 
+```
 
-| Route                   | Method |
-| ----------------------- | ------ |
-| `/fodler/{organization}`| GET    |
+| Route                    | Method |
+| ------------------------ | ------ |
+| `/fodler/{organization}` | GET    |
 
 Response:
 
@@ -126,6 +132,7 @@ Response:
 ```
 
 ## PostFolder( ) 🛠️
+
 This endpoint is used to create a new folder record.
 
 ```go
@@ -140,7 +147,9 @@ Creates a new folder record with specified permissions and associations.
 Returns the created folder data.
 
 Request:
-* Body (JSON, required): Contains the folder data including permissions and associations.
+
+- Body (JSON, required): Contains the folder data including permissions and associations.
+
 ```typescript
 {
   "name": string,
@@ -154,9 +163,9 @@ Request:
 }
 ```
 
-| Route           | Method |
-| --------------- | ------ |
-| `/folder/create`| POST   |
+| Route            | Method |
+| ---------------- | ------ |
+| `/folder/create` | POST   |
 
 Response:
 
@@ -167,6 +176,7 @@ Response:
 ```
 
 ## UpdateFolder( ) 🔄
+
 This function updates details of an existing folder.
 
 ```go
@@ -181,29 +191,36 @@ Updates the specified folder record with new data.
 Returns the updated folder data.
 
 Request:
-* Params (QueryString, required):
+
+- Params (QueryString, required):
+
 ```typescript
 {
   "folder_id": number,
   "organization_id": number
 }
 ```
-* Body (JSON, required): Contains the folder update data
+
+- Body (JSON, required): Contains the folder update data
+
 ```typescript
 {
-  "viewableBy"?: [number],
-  "editableBy"?: [number],
-  "accessibleBy"?: [string],
-  "modifiableBy"?: [string],
-  "files"?: [number],
-  "folders"?: [number]
-  // other fields as required
+  "viewable_by_ids"?: [number],
+  "editable_by_ids"?: [number],
+  "accessible_by_groups"?: [string],
+  "modifiable_by_groups"?: [string],
+  "file_ids"?: [number],
+  "folder_ids"?: [number],
+  "parent_folder_id": number,
+  "name": string,
+  "path": string,
+  "size": number
 }
 ```
 
-| Route           | Method |
-| --------------- | ------ |
-| `/folder/update`| PUT    |
+| Route            | Method |
+| ---------------- | ------ |
+| `/folder/update` | PUT    |
 
 Response:
 
@@ -214,6 +231,7 @@ Response:
 ```
 
 ## DeleteFolder( ) ❌
+
 This endpoint is used to delete a folder record.
 
 ```go
@@ -228,19 +246,22 @@ Deletes the specified folder record.
 Returns a confirmation message.
 
 Request:
-* Params (QueryString, required):
+
+- Params (QueryString, required):
+
 ```typescript
 {
   "id"?: number,
 }
 ```
 
-| Route           | Method |
-| --------------- | ------ |
-| `/folder/delete`| DELETE |
+| Route            | Method |
+| ---------------- | ------ |
+| `/folder/delete` | DELETE |
 
 Response:
 
 ```typescript
-{}
+{
+}
 ```

@@ -114,14 +114,14 @@ Request:
 
 ```typescript
 {
-  "id"?: number,
-  "organization"?: number
+  "file_id"?: number,
+  "organization_id": number
 }
 ```
 
 | Route        | Method |
 | ------------ | ------ |
-| `/fire/{id}` | GET    |
+| `/file/{id}` | GET    |
 
 Response:
 
@@ -154,7 +154,7 @@ Request:
 {
   "name": string,
   "thumbnail": string,
-  "organizationID": number,
+  "organization_id": number,
   "viewableBy": [number],
   "editableBy": [number],
   "accessibleBy": [string],
@@ -197,7 +197,8 @@ Request:
 
 ```typescript
 {
-  "id": number,
+  "file_id": number,
+  "organization_id": number
 }
 ```
 
@@ -210,10 +211,10 @@ Request:
   "thumbnail"?: string,
   "parent_folder_id"?: number,
   "size"?: number,
-  "viewableBy"?: [number],
-  "editableBy"?: [number],
-  "accessibleBy"?: [string],
-  "modifiableBy"?: [string],
+  "viewable_by_ids"?: [number],
+  "editable_by_ids"?: [number],
+  "accessible_by_groups"?: [string],
+  "modifiable_by_groups"?: [string],
 }
 ```
 

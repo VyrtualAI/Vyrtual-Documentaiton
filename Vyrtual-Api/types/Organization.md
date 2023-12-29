@@ -13,5 +13,6 @@ type Organization = {
   owners: number[];
   positions: number[];
   registered: boolean;
+  stripe_customer_id: string;
 };
 ```

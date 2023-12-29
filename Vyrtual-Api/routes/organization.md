@@ -22,7 +22,8 @@ Returns organizations along with metadata.
 
 Request:
 
-* Params (QueryString, required):
+- Params (QueryString, required):
+
 ```typescript
 {
   "page"?: number,
@@ -30,9 +31,9 @@ Request:
 }
 ```
 
-| Route               | Method |
-| ------------------- | ------ |
-| `/organization/list`| GET    |
+| Route                | Method |
+| -------------------- | ------ |
+| `/organization/list` | GET    |
 
 Response:
 
@@ -46,6 +47,7 @@ Response:
 ```
 
 ## GetOrganization( ) 📚
+
 This function retrieves details of a specific organization.
 
 ```go
@@ -60,16 +62,18 @@ Returns organization data.
 
 Request:
 
-* Params (QueryString, required):
+- Params (QueryString, required):
+
 ```typescript
 {
   "id"?: number
 }
 ```
-| Route               | Method |
-| ------------------- | ------ |
-| `/organization/{id}`| GET    |
-|  `/organization`    | GET    | 
+
+| Route                | Method |
+| -------------------- | ------ |
+| `/organization/{id}` | GET    |
+| `/organization`      | GET    |
 
 Response:
 
@@ -80,6 +84,7 @@ Response:
 ```
 
 ## PostOrganization( ) 🛠️
+
 This endpoint creates a new organization.
 
 ```go
@@ -93,7 +98,8 @@ Creates a new organization.
 Returns the created organization data.
 
 Request:
-* Body (JSON, required):
+
+- Body (JSON, required):
 
 ```typescript
 {
@@ -101,9 +107,9 @@ Request:
 }
 ```
 
-| Route                 | Method |
-| --------------------- | ------ |
-| `/organization/create`| POST   |
+| Route                  | Method |
+| ---------------------- | ------ |
+| `/organization/create` | POST   |
 
 Response:
 
@@ -114,6 +120,7 @@ Response:
 ```
 
 ## UpdateOrganization( ) 🔄
+
 This function updates an existing organization's details.
 
 ```go
@@ -127,7 +134,8 @@ Updates the organization.
 Returns the updated organization data.
 
 Request:
-* Params (QueryString, required):
+
+- Params (QueryString, required):
 
 ```typescript
 {
@@ -135,16 +143,27 @@ Request:
 }
 ```
 
-* Body (JSON, required):
+- Body (JSON, required):
+
 ```typescript
 {
-  // Update fields
+  "members"?: {
+    "user_id": number,
+    "position"?: string,
+    "role"?: string,
+    "department"?: string,
+    "delete"?: boolean
+  }[],
+  "logo"?: string,
+  "owner_ids"?: [number],
+  "registered"?: boolean
+  "stripe_customer_id"?: string
 }
 ```
 
-| Route                 | Method |
-| --------------------- | ------ |
-| `/organization/update`|  PUT   |
+| Route                  | Method |
+| ---------------------- | ------ |
+| `/organization/update` | PUT    |
 
 Response:
 
@@ -155,6 +174,7 @@ Response:
 ```
 
 ## DeleteOrganization( ) ❌
+
 This endpoint deletes an organization record.
 
 ```go
@@ -168,7 +188,8 @@ Deletes the specified organization.
 Returns a confirmation message.
 
 Request:
-* Params (QueryString, required):
+
+- Params (QueryString, required):
 
 ```typescript
 {
@@ -176,17 +197,19 @@ Request:
 }
 ```
 
-| Route                 | Method |
-| --------------------- | ------ |
-| `/organization/delete`| DELETE |
+| Route                  | Method |
+| ---------------------- | ------ |
+| `/organization/delete` | DELETE |
 
 Response:
 
 ```typescript
-{}
+{
+}
 ```
 
 ## ListOrganizationInvitations( ) 📨
+
 This endpoint lists invitations for a specific organization.
 
 ```go
@@ -199,7 +222,9 @@ Retrieves organization invitations based on query parameters.
 Returns a list of organization invitations with pagination.
 
 Request:
-* Params (QueryString, required):
+
+- Params (QueryString, required):
+
 ```typescript
 {
   "page"?: number,
@@ -208,9 +233,9 @@ Request:
 }
 ```
 
-| Route                      | Method |
-| -------------------------- | ------ |
-| `/organization/invitations`| GET    |
+| Route                       | Method |
+| --------------------------- | ------ |
+| `/organization/invitations` | GET    |
 
 Response:
 
@@ -223,6 +248,7 @@ Response:
 ```
 
 ## GetOrganizationInvitation( ) 💌
+
 Retrieves a specific organization invitation.
 
 ```go
@@ -236,17 +262,19 @@ Retrieves the specified organization invitation.
 Returns the invitation data.
 
 Request:
-* Params (QueryString, required):
-``` typescript
+
+- Params (QueryString, required):
+
+```typescript
 {
   "email"?: string,
   "organization_id"?: number
 }
 ```
 
-| Route                     | Method |
-| ------------------------- | ------ |
-| `/organization/invitation`| GET    |
+| Route                      | Method |
+| -------------------------- | ------ |
+| `/organization/invitation` | GET    |
 
 Response:
 
@@ -256,8 +284,8 @@ Response:
 }
 ```
 
-
 ## PostOrganizationInvitation( ) ✉️
+
 Creates a new invitation for an organization.
 
 ```go
@@ -271,7 +299,8 @@ Creates a new organization invitation.
 Returns the created invitation data.
 
 Request:
-* Body (JSON, required):
+
+- Body (JSON, required):
 
 ```typescript
 {
@@ -280,9 +309,9 @@ Request:
 }
 ```
 
-| Route                            | Method |
-| -------------------------------- | ------ |
-| `/organization/invitation/create`| POST   |
+| Route                             | Method |
+| --------------------------------- | ------ |
+| `/organization/invitation/create` | POST   |
 
 Response:
 
@@ -293,6 +322,7 @@ Response:
 ```
 
 ## UpdateOrganizationInvitation( ) 📝
+
 Updates an existing organization invitation.
 
 ```go
@@ -306,23 +336,27 @@ Updates the specified organization invitation.
 Returns the updated invitation data.
 
 Request:
-* Params (QueryString, required):
+
+- Params (QueryString, required):
+
 ```typescript
 {
   "email": string,
   "organization_id": number
 }
 ```
-* Body (JSON, required):
+
+- Body (JSON, required):
+
 ```typescript
 {
   // Update fields
 }
 ```
 
-| Route                            | Method |
-| -------------------------------- | ------ |
-| `/organization/invitation/update`|  PUT   |
+| Route                             | Method |
+| --------------------------------- | ------ |
+| `/organization/invitation/update` | PUT    |
 
 Response:
 
@@ -333,6 +367,7 @@ Response:
 ```
 
 ## DeleteOrganizationInvitation( ) 🗑️
+
 Deletes an organization invitation.
 
 ```go
@@ -346,7 +381,8 @@ Deletes the specified organization invitation.
 Returns a confirmation message.
 
 Request:
-* Params (QueryString, required):
+
+- Params (QueryString, required):
 
 ```typescript
 {
@@ -355,17 +391,19 @@ Request:
 }
 ```
 
-| Route                           | Method |
-| ------------------------------- | ------ |
-| `/organization/inviation/delete`| DELETE |
+| Route                            | Method |
+| -------------------------------- | ------ |
+| `/organization/inviation/delete` | DELETE |
 
 Response:
 
 ```typescript
-{}
+{
+}
 ```
 
 ## PostBatchOrganizationInvitations( ) 📦
+
 Creates multiple invitations for an organization in a batch.
 
 ```go
@@ -379,7 +417,8 @@ Creates multiple organization invitations.
 Returns the created invitations.
 
 Request:
-* Body (JSON, required):
+
+- Body (JSON, required):
 
 ```typescript
 {
@@ -388,9 +427,9 @@ Request:
 }
 ```
 
-| Route                            | Method |
-| -------------------------------- | ------ |
-| `/organization/inviations/create`| POST   |
+| Route                             | Method |
+| --------------------------------- | ------ |
+| `/organization/inviations/create` | POST   |
 
 Response:
 

@@ -10,4 +10,6 @@ type Role = {
   organization_id: number;
   organization: Organization;
 };
+
+type ValidRole = "admin" | "member" | "owner" | "vyrtual";
 ```

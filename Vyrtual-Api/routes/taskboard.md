@@ -112,12 +112,19 @@ Process:
 
 Request:
 
+Params (QueryString, required):
+
+```typescript
+{
+"organization_id": number,
+}
+```
+
 Body (JSON, required): Contains the task board data including name, organization, columns, etc.
 
 ```typescript
 {
 "name": string,
-"organization_id": number,
 "columns": [Column]
 }
 ```
@@ -164,8 +171,8 @@ Body (JSON, required): Contains the task board update data
 ```typescript
 {
 "name"?: string,
-"columns"?: [Column],
-"tasks"?: [Task]
+"columns"?: [BoardColumn],
+"task_ids"?: [number]
 }
 ```
 

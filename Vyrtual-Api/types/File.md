@@ -16,5 +16,6 @@ type File = {
   created_by: User;
   size: number;
   path: string;
+  download_url: string;
 };
 ```

@@ -160,7 +160,8 @@ Request:
   "accessibleBy": [string],
   "parentFolderID": number,
   "size": number,
-  "path": string
+  "path": string,
+  "download_url": string,
 }
 ```
 
@@ -215,6 +216,7 @@ Request:
   "editable_by_ids"?: [number],
   "accessible_by_groups"?: [string],
   "modifiable_by_groups"?: [string],
+  "download_url": string,
 }
 ```
 

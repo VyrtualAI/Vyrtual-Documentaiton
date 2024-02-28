@@ -32,9 +32,9 @@ Request:
 }
 ```
 
-| Route                | Method |
-| -------------------- | ------ |
-| `/organization/list` | GET    |
+| Route                        | Method |
+| ---------------------------- | ------ |
+| `/organization/profile/list` | GET    |
 
 Response:
 

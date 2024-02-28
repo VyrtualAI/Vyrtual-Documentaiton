@@ -14,5 +14,7 @@ type Task = {
   tags: number[]; // Array of numbers
   organization_id: number;
   task_board_id: number;
+  category_id: number;
+  department_id: number;
 };
 ```

@@ -125,6 +125,7 @@ Body (JSON, required): Contains the task data, including title, description, due
     "board_column"?: number,
     "task_board_id"?: number,
     "category_id"?: number,
+    "department_id"?: number,
     "prioritized"?: boolean
 }
 ```
@@ -180,6 +181,7 @@ Body (JSON, required): Contains the task update data.
   "task_board_id": number,
   "board_column_id"?: number,
   "category_id"?: number,
+  "department_id"?: number,
   "prioritized"?: boolean
 }
 ```

@@ -30,9 +30,56 @@ Response:
 
 ```typescript
 {
-    "management_profiles": [ManagementProfile],
+    "organization_management_profiles": [OrganizationManagementProfile],
     "total_records": int,
     "page": int,
     "per_page": int
+}
+```
+
+## UpdateOrganizationManagementProfile( ) 🔄
+
+This function updates an existing organization's details.
+
+```go
+func UpdateOrganizationManagementProfile(w http.ResponseWriter, r *http.Request, ctx *service.Service) error { ... }
+```
+
+Process:
+
+Parses organization ID and update fields from the request.
+Updates the organization management profile.
+Returns the updated organization profile data.
+
+Request:
+
+- Params (QueryString, required):
+
+```typescript
+{
+  "organization_id": number
+}
+```
+
+- Body (JSON, required):
+
+```typescript
+{
+ "managers"?: {
+    "user_id": number,
+    "delete"?: boolean
+ }[]
+}
+```
+
+| Route                                     | Method |
+| ----------------------------------------- | ------ |
+| `/organization/management/profile/update` | PUT    |
+
+Response:
+
+```typescript
+{
+    "organization_management_profile": OrganizationManagementProfile,
 }
 ```

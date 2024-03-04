@@ -40,7 +40,7 @@ Response:
 
 ```typescript
 {
-    "organization_profiles": [OrganizationProfile],
+    "organization_profiles": [OrganizationProfile & { "organization": Organization }],
     "total_records": int64,
     "page": int,
     "per_page": int
@@ -82,7 +82,7 @@ Response:
 
 ```typescript
 {
-    "organization_profile": Organization_Profile
+    "organization_profile": OrganizationProfile & { "organization": Organization }
 }
 ```
 
@@ -134,6 +134,6 @@ Response:
 
 ```typescript
 {
-    "organization_profile": OrganizationProfile
+    "organization_profile": OrganizationProfile & { "organization": Organization }
 }
 ```
